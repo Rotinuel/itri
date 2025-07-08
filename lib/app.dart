@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:itri/features/authentication/screens/onboarding.dart';
+import 'package:itri/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:itri/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: const OnboardingScreen(),
+      home: const OnBoardingScreen(),
     );
   }
 }
