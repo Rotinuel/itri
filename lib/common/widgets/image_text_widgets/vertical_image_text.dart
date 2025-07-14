@@ -43,7 +43,10 @@ class IVerticalImageText extends StatelessWidget {
             SizedBox(
               width: 55,
               child: 
-            Text('shoes Category', style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.white)))
+            Text(
+              'shoes Category', style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.white),maxLines: 1, overflow: TextOverflow.ellipsis,
+            ),
+            )
           ],
         ),
       ),
