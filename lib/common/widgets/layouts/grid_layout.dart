@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:itri/common/widgets/products/product_cards/product_card_vertical.dart';
+
 import 'package:itri/utils/constants/sizes.dart';
 
 class IGridLayout extends StatelessWidget {
@@ -21,8 +21,13 @@ class IGridLayout extends StatelessWidget {
       shrinkWrap: true,
       padding: EdgeInsets.zero,
       physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: TSizes.gridViewSpacing, crossAxisSpacing: TSizes.gridViewSpacing, mainAxisExtent: 288), 
-    itemBuilder: (_, index) => IProductCardVertical(),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2, 
+        mainAxisExtent: mainAxisExtent,
+        mainAxisSpacing: ISizes.gridViewSpacing, 
+        crossAxisSpacing: ISizes.gridViewSpacing, 
+        ), 
+    itemBuilder: itemBuilder,
     );
   }
 }

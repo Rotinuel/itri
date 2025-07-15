@@ -23,21 +23,21 @@ class SuccessScreen extends StatelessWidget {
                 image: AssetImage(image),
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
-              const SizedBox(height: TSizes.spaceBtwSections),
+              const SizedBox(height: ISizes.spaceBtwSections),
 
               Text(
                 title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems),
+              const SizedBox(height: ISizes.spaceBtwItems),
 
               Text(
                 subTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: TSizes.spaceBtwSections),
+              const SizedBox(height: ISizes.spaceBtwSections),
 
               // button
               SizedBox(

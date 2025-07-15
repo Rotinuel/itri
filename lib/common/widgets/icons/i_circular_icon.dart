@@ -10,7 +10,7 @@ class ICircularIcon extends StatelessWidget {
     required this.icon,
     this.width,
     this.height,
-    this.size = TSizes.lg,
+    this.size = ISizes.lg,
     this.onPressed,
     this.color,
     this.backgroundColor,

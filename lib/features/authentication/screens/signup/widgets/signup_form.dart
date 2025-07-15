@@ -31,7 +31,7 @@ class ISignupForm extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: TSizes.spaceBtwInputFields),
+              const SizedBox(width: ISizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
                   expands: false,
@@ -43,7 +43,7 @@ class ISignupForm extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: TSizes.spaceBtwInputFields),
+          const SizedBox(height: ISizes.spaceBtwInputFields),
     
           // username
           TextFormField(
@@ -54,7 +54,7 @@ class ISignupForm extends StatelessWidget {
             ),
           ),
     
-          const SizedBox(height: TSizes.spaceBtwInputFields),
+          const SizedBox(height: ISizes.spaceBtwInputFields),
           // email
           TextFormField(
             expands: false,
@@ -64,7 +64,7 @@ class ISignupForm extends StatelessWidget {
             ),
           ),
     
-          const SizedBox(height: TSizes.spaceBtwInputFields),
+          const SizedBox(height: ISizes.spaceBtwInputFields),
           // Phone Number
           TextFormField(
             expands: false,
@@ -74,7 +74,7 @@ class ISignupForm extends StatelessWidget {
             ),
           ),
     
-          const SizedBox(height: TSizes.spaceBtwInputFields),
+          const SizedBox(height: ISizes.spaceBtwInputFields),
           // Password
           TextFormField(
             obscureText: true,
@@ -84,7 +84,7 @@ class ISignupForm extends StatelessWidget {
               suffixIcon: Icon(Iconsax.eye_slash),
             ),
           ),
-          const SizedBox(height: TSizes.spaceBtwSections),
+          const SizedBox(height: ISizes.spaceBtwSections),
     
           // Terms&Conditions CheckBox
           Row(
@@ -94,7 +94,7 @@ class ISignupForm extends StatelessWidget {
                 height: 24,
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
-              const SizedBox(width: TSizes.spaceBtwInputFields),
+              const SizedBox(width: ISizes.spaceBtwInputFields),
               Text.rich(
                 TextSpan(
                   children: [
@@ -138,7 +138,7 @@ class ISignupForm extends StatelessWidget {
             ],
           ),
           // sign up button
-          const SizedBox(height: TSizes.spaceBtwSections),
+          const SizedBox(height: ISizes.spaceBtwSections),
           SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => const VerifyEmailScreen()), child: const Text(TTexts.createAccount))),
         ],
       ),

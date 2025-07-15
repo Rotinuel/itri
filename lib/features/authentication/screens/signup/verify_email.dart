@@ -22,12 +22,12 @@
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsetsGeometry.all(TSizes.defaultSpace),
+            padding: EdgeInsetsGeometry.all(ISizes.defaultSpace),
             child: Column(
               children: [
                 // image
-                Image(image: const AssetImage(TImages.deliveredEmailIllustration), width: THelperFunctions.screenWidth() * 0.6,),
-                const SizedBox(height: TSizes.spaceBtwSections),
+                Image(image: const AssetImage(IImages.deliveredEmailIllustration), width: THelperFunctions.screenWidth() * 0.6,),
+                const SizedBox(height: ISizes.spaceBtwSections),
 
                 // Title
                 Text(
@@ -35,23 +35,23 @@
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: TSizes.spaceBtwItems),
+                const SizedBox(height: ISizes.spaceBtwItems),
                 // Subtitle
                 Text(
                   'support@lofi@gmail.com',
                   style: Theme.of(context).textTheme.labelLarge,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: TSizes.spaceBtwItems),
+                const SizedBox(height: ISizes.spaceBtwItems),
                 Text(TTexts.confirmEmailSubTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
-                const SizedBox(height: TSizes.spaceBtwSections),
+                const SizedBox(height: ISizes.spaceBtwSections),
                 
                 // button
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () => Get.to(() => SuccessScreen(
-                      image: TImages.staticSuccessIllustration,
+                      image: IImages.staticSuccessIllustration,
                       title: TTexts.yourAccountCreatedTitle,
                       subTitle: TTexts.yourAccountCreatedSubTitle,
                       onPressed: () => Get.to(() => const LoginScreen()),
@@ -59,7 +59,7 @@
                     child: const Text(TTexts.tContinue),
                   ),
                 ),
-                const SizedBox(height: TSizes.spaceBtwItems),
+                const SizedBox(height: ISizes.spaceBtwItems),
                 SizedBox(
                   width: double.infinity,
                   child: TextButton(

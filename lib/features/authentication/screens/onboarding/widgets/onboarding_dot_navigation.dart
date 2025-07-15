@@ -19,7 +19,7 @@ class OnBoardingDotNavigation extends StatelessWidget{
     return 
         Positioned(
             bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
-            left: TSizes.defaultSpace,
+            left: ISizes.defaultSpace,
             child: SmoothPageIndicator(
               count: 3, 
               controller: controller.pageController,

@@ -14,7 +14,7 @@ class ILoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+        padding: const EdgeInsets.symmetric(vertical: ISizes.spaceBtwSections),
         child: Column(
           children: [
             // Email
@@ -24,7 +24,7 @@ class ILoginForm extends StatelessWidget {
                 labelText: TTexts.email,
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwInputFields),
+            const SizedBox(height: ISizes.spaceBtwInputFields),
             // Password
             TextFormField(
               decoration: const InputDecoration(
@@ -33,7 +33,7 @@ class ILoginForm extends StatelessWidget {
                 suffixIcon: Icon(Iconsax.eye_slash),
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwInputFields / 2),
+            const SizedBox(height: ISizes.spaceBtwInputFields / 2),
             // Remember Me & Forget Password
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +52,7 @@ class ILoginForm extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: TSizes.spaceBtwSections),
+            const SizedBox(height: ISizes.spaceBtwSections),
             // sign in button
             SizedBox(
               width: double.infinity,
@@ -61,7 +61,7 @@ class ILoginForm extends StatelessWidget {
                 child: const Text(TTexts.signIn),
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwItems),
+            const SizedBox(height: ISizes.spaceBtwItems),
 
             // create account button
             SizedBox(

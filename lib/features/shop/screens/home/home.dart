@@ -4,9 +4,9 @@ import 'package:itri/common/widgets/custom_shapes/containers/search_container.da
 import 'package:itri/common/widgets/layouts/grid_layout.dart';
 import 'package:itri/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
-import 'package:itri/features/shop/screen/home/widgets/home_appbar.dart';
-import 'package:itri/features/shop/screen/home/widgets/home_categories.dart';
-import 'package:itri/features/shop/screen/home/widgets/promo_slider.dart';
+import 'package:itri/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:itri/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:itri/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:itri/utils/constants/image_strings.dart';
 import 'package:itri/utils/constants/sizes.dart';
 
@@ -25,15 +25,15 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   // app bar
                   IHomeAppBar(),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(height: ISizes.spaceBtwSections),
 
                   // searchbar
                   ISearchContainer(text: 'Search in Store'),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(height: ISizes.spaceBtwSections),
 
                   // Categories
                   Padding(
-                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: ISizes.defaultSpace),
                     child: Column(
                       children: [
                         // header
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
-                        SizedBox(height: TSizes.spaceBtwItems),
+                        SizedBox(height: ISizes.spaceBtwItems),
 
                         // Categories
                         IHomeCategories(),
@@ -54,21 +54,21 @@ class HomeScreen extends StatelessWidget {
             ),
 
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: EdgeInsets.all(ISizes.defaultSpace),
               child: Column(
                 children: [
                   const IPromoSlider(
                     banners: [
-                      TImages.promoBanner1,
-                      TImages.promoBanner2,
-                      TImages.promoBanner3,
+                      IImages.promoBanner1,
+                      IImages.promoBanner2,
+                      IImages.promoBanner3,
                     ],
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  const SizedBox(height: ISizes.spaceBtwSections),
 
                   ISectionHeading(title: 'Popular Products', onPressed: (){}),
                   
-                  const SizedBox(height: TSizes.spaceBtwItems),
+                  const SizedBox(height: ISizes.spaceBtwItems),
                   IGridLayout(itemCount: 8, itemBuilder: (_, index) => const IProductCardVertical()), 
                 ],
               ),

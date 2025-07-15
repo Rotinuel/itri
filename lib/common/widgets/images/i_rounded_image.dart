@@ -15,7 +15,7 @@ class IRoundedImage extends StatelessWidget {
     this.padding, 
     this.isNetworkImage = false, 
     this.onPressed, 
-    this.borderRadius = TSizes.md,
+    this.borderRadius = ISizes.md,
   });
 
   final double? width, height;

@@ -12,13 +12,15 @@ class ISearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal, 
     this.showBackground = true, 
     this.showBorder = true, 
-    this.onTap,
+    this.onTap, 
+    this.padding = const EdgeInsets.symmetric(horizontal: ISizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
-  final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final bool showBackground, showBorder;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +29,19 @@ class ISearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
-          padding: const EdgeInsets.all(TSizes.md),
+          padding: const EdgeInsets.all(ISizes.md),
           decoration: BoxDecoration(
             color: showBackground ? dark ? TColors.dark : TColors.light : Colors.transparent,
-            borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
+            borderRadius: BorderRadius.circular(ISizes.cardRadiusLg),
             border: showBorder ? Border.all(color: TColors.grey) : null
           ),
           child: Row(
             children: [
               const Icon(Iconsax.search_normal, color: TColors.darkerGrey),
-              const SizedBox(width: TSizes.spaceBtwItems),
+              const SizedBox(width: ISizes.spaceBtwItems),
               Text('Search in Store', style: Theme.of(context).textTheme.bodySmall),
             ]
           ),

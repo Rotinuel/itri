@@ -19,13 +19,13 @@ class ISocialButtons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: const Image(
-              width: TSizes.iconMd,
-              height: TSizes.iconMd,
-              image: AssetImage(TImages.google),
+              width: ISizes.iconMd,
+              height: ISizes.iconMd,
+              image: AssetImage(IImages.google),
             ),
           ),
         ),
-        const SizedBox(width: TSizes.spaceBtwItems),
+        const SizedBox(width: ISizes.spaceBtwItems),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: TColors.grey),
@@ -34,9 +34,9 @@ class ISocialButtons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: const Image(
-              width: TSizes.iconMd,
-              height: TSizes.iconMd,
-              image: AssetImage(TImages.facebook),
+              width: ISizes.iconMd,
+              height: ISizes.iconMd,
+              image: AssetImage(IImages.facebook),
             ),
           ),
         ),

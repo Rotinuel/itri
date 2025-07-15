@@ -17,7 +17,7 @@ class OnBoardingNextButton extends StatelessWidget{
     final dark = THelperFunctions.isDarkMode(context);
     return 
         Positioned(
-            right: TSizes.defaultSpace,
+            right: ISizes.defaultSpace,
             bottom: TDeviceUtils.getBottomNavigationBarHeight(),
             child: ElevatedButton(
               onPressed: () => OnBoardingController.instance.nextPage(),

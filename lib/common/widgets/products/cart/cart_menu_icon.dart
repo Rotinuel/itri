@@ -4,7 +4,9 @@ import 'package:itri/utils/constants/colors.dart';
 
 class ICartCounterIcon extends StatelessWidget {
   const ICartCounterIcon({
-    super.key, required this.iconColor, required this.onPressed,
+    super.key, 
+    this.iconColor = TColors.black, 
+    required this.onPressed,
   });
 
   final Color iconColor;

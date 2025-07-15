@@ -24,13 +24,13 @@ class IVerticalImageText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
+        padding: const EdgeInsets.only(right: ISizes.spaceBtwItems),
         child: Column(
           children: [
             Container(
               width: 56,
               height: 56,
-              padding: const EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(ISizes.sm),
               decoration: BoxDecoration(
                 color: backgroundColor ?? (THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white),
                 borderRadius: BorderRadius.circular(100),
@@ -39,7 +39,7 @@ class IVerticalImageText extends StatelessWidget {
                 child: Image(image: AssetImage(image), fit: BoxFit.cover, color: dark ? TColors.light : TColors.dark),
                 ),
             ),
-              const SizedBox(height: TSizes.spaceBtwItems / 2),
+              const SizedBox(height: ISizes.spaceBtwItems / 2),
             SizedBox(
               width: 55,
               child: 

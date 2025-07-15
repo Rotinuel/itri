@@ -29,7 +29,7 @@ class IPromoSlider extends StatelessWidget {
           ),
           items: banners.map((url) => IRoundedImage(imageUrl: url)).toList()
         ),
-        const SizedBox(height: TSizes.spaceBtwItems),
+        const SizedBox(height: ISizes.spaceBtwItems),
         
         Center(
           child: Obx(
