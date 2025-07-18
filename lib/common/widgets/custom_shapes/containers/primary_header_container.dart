@@ -11,29 +11,26 @@ class IPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ICurvedEdgeWidget(
-      child: SizedBox(
-        height: 400,
-        child: Container(
-          color: TColors.primary,
-          child: Stack(
-            children: [
-              Positioned(
-                top: -150,
-                right: -250,
-                child: ICircularContainer(
-                  backgroundColor: TColors.textWhite.withAlpha(26),
-                ),
+      child: Container(
+        color: TColors.primary,
+        child: Stack(
+          children: [
+            Positioned(
+              top: -150,
+              right: -250,
+              child: ICircularContainer(
+                backgroundColor: TColors.textWhite.withAlpha(26),
               ),
-              Positioned(
-                top: 100,
-                right: -300,
-                child: ICircularContainer(
-                  backgroundColor: TColors.textWhite.withAlpha(26),
-                ),
+            ),
+            Positioned(
+              top: 100,
+              right: -300,
+              child: ICircularContainer(
+                backgroundColor: TColors.textWhite.withAlpha(26),
               ),
-              child,
-            ],
-          ),
+            ),
+            child,
+          ],
         ),
       ),
     );

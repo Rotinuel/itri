@@ -49,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: ISizes.spaceBtwSections),
                 ],
               ),
             ),
@@ -69,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                   ISectionHeading(title: 'Popular Products', onPressed: (){}),
                   
                   const SizedBox(height: ISizes.spaceBtwItems),
-                  IGridLayout(itemCount: 8, itemBuilder: (_, index) => const IProductCardVertical()), 
+                  IGridLayout(itemCount: 2, itemBuilder: (_, index) => const IProductCardVertical()), 
                 ],
               ),
             ),

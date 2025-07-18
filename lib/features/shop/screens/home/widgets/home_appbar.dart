@@ -20,7 +20,7 @@ class IHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        ICartCounterIcon(onPressed: () {  }, iconColor: TColors.white,)
+        ICartCounterIcon(onPressed: () {  }, iconColor: TColors.white, )
       ],
     );
   }

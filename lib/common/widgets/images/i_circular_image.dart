@@ -25,15 +25,16 @@ class ICircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         // if image
-        color: THelperFunctions.isDarkMode(context)
+        color: backgroundColor ?? (dark
             ? TColors.black
-            : TColors.white,
+            : TColors.white),
         borderRadius: BorderRadius.circular(100),
       ),
       child: Center(

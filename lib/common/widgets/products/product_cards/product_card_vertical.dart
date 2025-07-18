@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:itri/common/styles/shadow.dart';
 import 'package:itri/common/widgets/custom_shapes/containers/rounded_container.dart';
@@ -7,6 +8,7 @@ import 'package:itri/common/widgets/images/i_rounded_image.dart';
 import 'package:itri/common/widgets/texts/i_brand_title_text_with_verified_icon.dart';
 import 'package:itri/common/widgets/texts/product_price_text.dart';
 import 'package:itri/common/widgets/texts/product_title_text.dart';
+import 'package:itri/features/shop/screens/product_details/product_details.dart';
 import 'package:itri/utils/constants/colors.dart';
 import 'package:itri/utils/constants/image_strings.dart';
 import 'package:itri/utils/constants/sizes.dart';
@@ -21,7 +23,7 @@ class IProductCardVertical extends StatelessWidget {
 
     
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -75,18 +77,21 @@ class IProductCardVertical extends StatelessWidget {
             ),
             const SizedBox(height: ISizes.spaceBtwItems / 2),
 
-            Padding(
-              padding: const EdgeInsets.only(left: ISizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const IProductTitleText(
-                    title: 'Green Nike Air Shoes',
-                    smallSize: true,
-                  ),
-                  const SizedBox(height: ISizes.spaceBtwItems / 2),
-                  IBrandTitleWithVerifiedIcon(title: 'Nike'),
-                ],
+            const Padding(
+              padding: EdgeInsets.only(left: ISizes.sm),
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IProductTitleText(
+                      title: 'Green Nike Air',
+                      smallSize: true,
+                    ),
+                    SizedBox(height: ISizes.spaceBtwItems / 2),
+                    IBrandTitleWithVerifiedIcon(title: 'Nike'),
+                  ],
+                ),
               ),
             ),
             const Spacer(),
@@ -98,18 +103,18 @@ class IProductCardVertical extends StatelessWidget {
                   child: IProductPriceText(price: '550.00'),
                 ),
                 Container(
-                  decoration: const BoxDecoration(
-                    color: TColors.dark,
-                    borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                    color: dark ?  TColors.white : TColors.dark,
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(ISizes.cardRadiusMd),
                       bottomRight: Radius.circular(ISizes.productImageRadius),
                     ),
                   ),
-                  child: const SizedBox(
+                  child: SizedBox(
                     width: ISizes.iconLg * 1.2,
                     height: ISizes.iconLg * 1.2,
                     child: Center(
-                      child: Icon(Iconsax.add, color: TColors.white),
+                      child: Icon(Iconsax.add, color: dark ? TColors.dark :  TColors.white),
                     ),
                   ),
                 ),

@@ -24,11 +24,12 @@ class ICircularIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: backgroundColor != null ? backgroundColor! : THelperFunctions.isDarkMode(context) ? TColors.black.withAlpha(230): TColors.white.withAlpha(230),
+        color: backgroundColor ?? (dark ?  TColors.black.withAlpha(230): TColors.white.withAlpha(230)),
         borderRadius: BorderRadius.circular(100),
       ),
       child: IconButton(onPressed: onPressed, icon: Icon(icon, color: color, size: size)),
