@@ -14,14 +14,14 @@ class IHomeAppBar extends StatelessWidget {
     return IAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children:  [
           Text(TTexts.homeAppbarTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.grey)),
           Text(TTexts.homeAppbarSubTitle, style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white)),
         ],
       ),
       actions: [
-        ICartCounterIcon(onPressed: () {  }, iconColor: TColors.white, )
+        ICartCounterIcon(onPressed: () { }, iconColor: TColors.white, counterBgColor: TColors. black, counterTextColor: TColors.white),
       ],
     );
-  }
+   }
 }

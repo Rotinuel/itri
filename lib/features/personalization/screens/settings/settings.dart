@@ -6,6 +6,7 @@ import 'package:itri/common/widgets/custom_shapes/containers/primary_header_cont
 import 'package:itri/common/widgets/list_tiles/settings_menu_tiles.dart';
 import 'package:itri/common/widgets/list_tiles/user_profile_title.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
+import 'package:itri/features/personalization/screens/address/address.dart';
 import 'package:itri/features/personalization/screens/profile/profile.dart';
 import 'package:itri/utils/constants/colors.dart';
 
@@ -40,7 +41,7 @@ class SettingsScreen extends StatelessWidget {
                   ISectionHeading(title: 'Account Settings', showActionButton: false,),
                   SizedBox(height: ISizes.spaceBtwItems),
 
-                  ISettingsMenuTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address'),
+                  ISettingsMenuTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address', onTap: ()=> Get.to(()=> const UserAddressScreen()),),
                   ISettingsMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
                   ISettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders'),
                   ISettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
