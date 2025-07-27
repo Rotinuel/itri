@@ -28,7 +28,7 @@ class IProductCardVertical extends StatelessWidget {
         width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-          boxShadow: [TShadowStyle.verticalProductShadow],
+          boxShadow: [IShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(ISizes.productImageRadius),
           color: dark ? IColors.darkerGrey : IColors.white,
         ),
@@ -64,7 +64,7 @@ class IProductCardVertical extends StatelessWidget {
                     ),
                   ),
 
-                  const Positioned(
+                  Positioned(
                     top: 0,
                     right: 0,
                     child: ICircularIcon(

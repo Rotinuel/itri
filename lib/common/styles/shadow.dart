@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:itri/utils/constants/colors.dart';
 
-class TShadowStyle {
+class IShadowStyle {
   static final verticalProductShadow = BoxShadow(
     color: IColors.darkGrey.withAlpha(26),
     blurRadius: 7,

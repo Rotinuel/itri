@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:itri/common/widgets/image_text_widgets/vertical_image_text.dart';
+import 'package:itri/features/shop/screens/sub_catogery/sub_categories.dart';
 import 'package:itri/utils/constants/image_strings.dart';
 
 class IHomeCategories extends StatelessWidget {
@@ -16,7 +18,7 @@ class IHomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index ){
-          return IVerticalImageText(image: IImages.shoeIcon, title: 'Shoes', onTap: () {});
+          return IVerticalImageText(image: IImages.shoeIcon, title: 'Shoes', onTap: () => Get.to(() => const SubCategoriesScreen()));
         },
       )
     );
