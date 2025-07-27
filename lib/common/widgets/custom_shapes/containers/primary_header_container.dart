@@ -12,21 +12,21 @@ class IPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return ICurvedEdgeWidget(
       child: Container(
-        color: TColors.primary,
+        color: IColors.primary,
         child: Stack(
           children: [
             Positioned(
               top: -150,
               right: -250,
               child: ICircularContainer(
-                backgroundColor: TColors.textWhite.withAlpha(26),
+                backgroundColor: IColors.textWhite.withAlpha(26),
               ),
             ),
             Positioned(
               top: 100,
               right: -300,
               child: ICircularContainer(
-                backgroundColor: TColors.textWhite.withAlpha(26),
+                backgroundColor: IColors.textWhite.withAlpha(26),
               ),
             ),
             child,

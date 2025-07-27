@@ -10,11 +10,11 @@ class IButttonAddToCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: ISizes.defaultSpace, vertical: ISizes.defaultSpace / 2),
       decoration: BoxDecoration(
-        color: dark ? TColors.darkerGrey : TColors.light,
+        color: dark ? IColors.darkerGrey : IColors.light,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(ISizes.cardRadiusLg),
           topRight: Radius.circular(ISizes.cardRadiusLg),
@@ -27,20 +27,20 @@ class IButttonAddToCart extends StatelessWidget {
             children: [
               const ICircularIcon(
                 icon: Iconsax.minus,
-                backgroundColor: TColors.darkGrey,
+                backgroundColor: IColors.darkGrey,
                 width: 40,
                 height: 40,
-                color: TColors.white,
+                color: IColors.white,
                 ),
                 const SizedBox(width: ISizes.spaceBtwItems),
                 Text('2', style: Theme.of(context).textTheme.titleSmall),
                 const SizedBox(width: ISizes.spaceBtwItems),
                 const ICircularIcon(
                   icon: Iconsax.add,
-                  backgroundColor: TColors.black,
+                  backgroundColor: IColors.black,
                   width: 40,
                   height: 40,
-                  color: TColors.white,
+                  color: IColors.white,
                   ),
             ],
           ),
@@ -48,8 +48,8 @@ class IButttonAddToCart extends StatelessWidget {
             onPressed: (){}, 
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(ISizes.md),
-              backgroundColor: TColors.black,
-              side: const BorderSide(color: TColors.black),
+              backgroundColor: IColors.black,
+              side: const BorderSide(color: IColors.black),
               ),
               child: const Text('Add to Cart'),
             )

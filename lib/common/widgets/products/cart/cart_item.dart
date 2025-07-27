@@ -20,9 +20,9 @@ class ICartItem extends StatelessWidget {
           width: 60,
           height: 60,
           padding: EdgeInsets.all(ISizes.sm),
-          backgroundColor: THelperFunctions.isDarkMode(context)
-              ? TColors.darkerGrey
-              : TColors.light,
+          backgroundColor: IHelperFunctions.isDarkMode(context)
+              ? IColors.darkerGrey
+              : IColors.light,
         ),
         const SizedBox(width: ISizes.spaceBtwItems),
 

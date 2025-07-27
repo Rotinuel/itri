@@ -21,9 +21,9 @@ class IUserProfileTitle extends StatelessWidget {
          height: 50,
          padding: 0,
          ),
-         title: Text('xalphi', style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),),
-         subtitle: Text('xalphi@proton.me', style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),),
-         trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: TColors.white))
+         title: Text('xalphi', style: Theme.of(context).textTheme.headlineSmall!.apply(color: IColors.white),),
+         subtitle: Text('xalphi@proton.me', style: Theme.of(context).textTheme.bodyMedium!.apply(color: IColors.white),),
+         trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: IColors.white))
      );
   }
 }

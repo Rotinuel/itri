@@ -24,7 +24,7 @@ class ISearchContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
       onTap: onTap,
@@ -34,13 +34,13 @@ class ISearchContainer extends StatelessWidget {
           width: TDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(ISizes.md),
           decoration: BoxDecoration(
-            color: showBackground ? dark ? TColors.dark : TColors.light : Colors.transparent,
+            color: showBackground ? dark ? IColors.dark : IColors.light : Colors.transparent,
             borderRadius: BorderRadius.circular(ISizes.cardRadiusLg),
-            border: showBorder ? Border.all(color: TColors.grey) : null
+            border: showBorder ? Border.all(color: IColors.grey) : null
           ),
           child: Row(
             children: [
-              const Icon(Iconsax.search_normal, color: TColors.darkerGrey),
+              const Icon(Iconsax.search_normal, color: IColors.darkerGrey),
               const SizedBox(width: ISizes.spaceBtwItems),
               Text('Search in Store', style: Theme.of(context).textTheme.bodySmall),
             ]

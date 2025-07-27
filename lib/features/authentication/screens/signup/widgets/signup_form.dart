@@ -16,7 +16,7 @@ class ISignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
         children: [
@@ -107,12 +107,12 @@ class ISignupForm extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium!
                           .apply(
                             color: dark
-                                ? TColors.white
-                                : TColors.primary,
+                                ? IColors.white
+                                : IColors.primary,
                             decoration: TextDecoration.underline,
                             decorationColor: dark
-                                ? TColors.white
-                                : TColors.primary,
+                                ? IColors.white
+                                : IColors.primary,
                           ),
                     ),
                     TextSpan(
@@ -124,12 +124,12 @@ class ISignupForm extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium!
                           .apply(
                             color: dark
-                                ? TColors.white
-                                : TColors.primary,
+                                ? IColors.white
+                                : IColors.primary,
                             decoration: TextDecoration.underline,
                             decorationColor: dark
-                                ? TColors.white
-                                : TColors.primary,
+                                ? IColors.white
+                                : IColors.primary,
                           ),
                     ),
                   ],

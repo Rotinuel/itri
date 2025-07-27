@@ -20,12 +20,12 @@ class IProductQuantityWithAddRemoveButtons extends StatelessWidget {
           width: 32,
           height: 32,
           size: ISizes.md,
-          color: THelperFunctions.isDarkMode(context)
-              ? TColors.white
-              : TColors.black,
-          backgroundColor: THelperFunctions.isDarkMode(context)
-              ? TColors.darkerGrey
-              : TColors.light,
+          color: IHelperFunctions.isDarkMode(context)
+              ? IColors.white
+              : IColors.black,
+          backgroundColor: IHelperFunctions.isDarkMode(context)
+              ? IColors.darkerGrey
+              : IColors.light,
         ),
         const SizedBox(width: ISizes.spaceBtwItems),
         Text(
@@ -38,8 +38,8 @@ class IProductQuantityWithAddRemoveButtons extends StatelessWidget {
           width: 32,
           height: 32,
           size: ISizes.md,
-          color: TColors.white,
-          backgroundColor: TColors.primary,
+          color: IColors.white,
+          backgroundColor: IColors.primary,
         ),
       ],
     );

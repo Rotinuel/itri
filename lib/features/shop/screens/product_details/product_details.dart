@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
+import 'package:itri/features/shop/screens/checkout/checkout.dart';
 import 'package:itri/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:itri/features/shop/screens/product_details/widgets/product_attribute.dart';
 import 'package:itri/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
@@ -46,7 +47,7 @@ class ProductDetailScreen extends StatelessWidget {
                   // checkOut Button
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(onPressed: (){}, child: Text('checkout')),
+                    child: ElevatedButton(onPressed: () => Get.to(() => const CheckOutScreen()), child: Text('checkout')),
                   ),
                   const SizedBox(height: ISizes.spaceBtwSections),
 

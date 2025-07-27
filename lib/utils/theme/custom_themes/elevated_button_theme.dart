@@ -11,13 +11,13 @@ class TElevatedButtonTheme {
   static final lightElevatedButtonTheme  = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      foregroundColor: TColors.light,
-      backgroundColor: TColors.primary,
-      disabledForegroundColor: TColors.darkGrey,
-      disabledBackgroundColor: TColors.buttonDisabled,
-      side: const BorderSide(color: TColors.primary),
+      foregroundColor: IColors.light,
+      backgroundColor: IColors.primary,
+      disabledForegroundColor: IColors.darkGrey,
+      disabledBackgroundColor: IColors.buttonDisabled,
+      side: const BorderSide(color: IColors.primary),
       padding: const EdgeInsets.symmetric(vertical: ISizes.buttonHeight),
-      textStyle: const TextStyle(fontSize: 16, color: TColors.textWhite, fontWeight: FontWeight.w600),
+      textStyle: const TextStyle(fontSize: 16, color: IColors.textWhite, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(ISizes.buttonRadius)),
     ),
   );
@@ -26,13 +26,13 @@ class TElevatedButtonTheme {
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      foregroundColor: TColors.light,
-      backgroundColor: TColors.primary,
-      disabledForegroundColor: TColors.darkGrey,
-      disabledBackgroundColor: TColors.darkerGrey,
-      side: const BorderSide(color: TColors.primary),
+      foregroundColor: IColors.light,
+      backgroundColor: IColors.primary,
+      disabledForegroundColor: IColors.darkGrey,
+      disabledBackgroundColor: IColors.darkerGrey,
+      side: const BorderSide(color: IColors.primary),
       padding: const EdgeInsets.symmetric(vertical: ISizes.buttonHeight),
-      textStyle: const TextStyle(fontSize: 16, color: TColors.textWhite, fontWeight: FontWeight.w600),
+      textStyle: const TextStyle(fontSize: 16, color: IColors.textWhite, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(ISizes.buttonRadius)),
     ),
   );

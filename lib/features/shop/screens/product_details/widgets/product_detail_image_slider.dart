@@ -16,11 +16,11 @@ class IProductImageSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
 
     return ICurvedEdgeWidget(
       child: Container(
-        color: dark ? TColors.darkerGrey : TColors.light,
+        color: dark ? IColors.darkerGrey : IColors.light,
         child: Stack(
           children: [
             SizedBox(height: 400, child: Padding(
@@ -42,8 +42,8 @@ class IProductImageSlider extends StatelessWidget {
                   separatorBuilder: (_, _) => const SizedBox(width: ISizes.spaceBtwItems), 
                   itemBuilder: (_, index) => IRoundedImage(
                     width: 80,
-                    backgroundColor: dark ? TColors.dark : TColors.white,
-                    border: Border.all(color: TColors.primary),
+                    backgroundColor: dark ? IColors.dark : IColors.white,
+                    border: Border.all(color: IColors.primary),
                     padding: const EdgeInsets.all(ISizes.sm),
                     imageUrl: IImages.productImage3,
                     ),

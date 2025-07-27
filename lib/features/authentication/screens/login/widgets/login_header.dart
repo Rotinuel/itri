@@ -10,7 +10,7 @@ class ILoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return 
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,

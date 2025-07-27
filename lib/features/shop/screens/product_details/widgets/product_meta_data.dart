@@ -17,7 +17,7 @@ class IProductMetaData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = THelperFunctions.isDarkMode(context);
+    final darkMode = IHelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children : [
@@ -27,9 +27,9 @@ class IProductMetaData extends StatelessWidget {
           // Sale Tag
           IRoundedContainer(
             radius: ISizes.sm,
-            backgroundColor: TColors.secondary.withAlpha(204),
+            backgroundColor: IColors.secondary.withAlpha(204),
             padding: const EdgeInsets.symmetric(horizontal: ISizes.sm, vertical: ISizes.xs),
-            child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: TColors.black)),
+            child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: IColors.black)),
           ),
           const SizedBox(width: ISizes.spaceBtwItems),
 
@@ -63,7 +63,7 @@ class IProductMetaData extends StatelessWidget {
               image: IImages.shoeIcon,
               width: 32,
               height: 32,
-              overlayColor: darkMode ? TColors.white : TColors.black,
+              overlayColor: darkMode ? IColors.white : IColors.black,
               ),
             IBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.medium),
           ],

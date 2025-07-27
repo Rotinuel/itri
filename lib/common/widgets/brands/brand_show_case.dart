@@ -17,7 +17,7 @@ class IBrandShowcase extends StatelessWidget {
   Widget build(BuildContext context) {
     return IRoundedContainer(
       showBorder: true,
-      borderColor: TColors.darkGrey,
+      borderColor: IColors.darkGrey,
       backgroundColor: Colors.transparent,
       padding: const EdgeInsets.all(ISizes.md),
       margin: const EdgeInsets.only(bottom: ISizes.spaceBtwItems),
@@ -39,7 +39,7 @@ class IBrandShowcase extends StatelessWidget {
     return Expanded(
       child: IRoundedContainer(
         height: 100,
-        backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkerGrey : TColors.light,
+        backgroundColor: IHelperFunctions.isDarkMode(context) ? IColors.darkerGrey : IColors.light,
         margin: const EdgeInsets.only(right: ISizes.sm),
         padding: const EdgeInsets.all(ISizes.md),
         child: Image(fit: BoxFit.contain, image: AssetImage(image))

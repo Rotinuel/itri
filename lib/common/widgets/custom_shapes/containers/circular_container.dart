@@ -10,7 +10,7 @@ class ICircularContainer extends StatelessWidget {
     this.radius = 400,  
     this.padding = 0,
     this.margin,
-    this.backgroundColor = TColors.white,
+    this.backgroundColor = IColors.white,
   });
 
   final double? width;

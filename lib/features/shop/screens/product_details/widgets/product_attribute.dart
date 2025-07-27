@@ -13,13 +13,13 @@ class IProductAttributes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return Column(
       children: [
         // selected Attribute Pricing & description
         IRoundedContainer(
           padding: const EdgeInsets.all(ISizes.md),
-          backgroundColor: dark ? TColors.darkerGrey : TColors.grey,
+          backgroundColor: dark ? IColors.darkerGrey : IColors.grey,
           child: Column(
             children: [
               // Title, price and stock status

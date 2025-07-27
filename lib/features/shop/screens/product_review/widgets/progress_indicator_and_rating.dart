@@ -22,9 +22,9 @@ class IRatingProgressIndicator extends StatelessWidget {
             child: LinearProgressIndicator(
               value: value,
               minHeight: 12,
-              backgroundColor: TColors.grey,
+              backgroundColor: IColors.grey,
               borderRadius: BorderRadius.circular(7),
-              valueColor: const AlwaysStoppedAnimation(TColors.primary),
+              valueColor: const AlwaysStoppedAnimation(IColors.primary),
             )
           ))
       ],

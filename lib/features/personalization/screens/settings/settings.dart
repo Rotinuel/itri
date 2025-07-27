@@ -8,6 +8,7 @@ import 'package:itri/common/widgets/list_tiles/user_profile_title.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
 import 'package:itri/features/personalization/screens/address/address.dart';
 import 'package:itri/features/personalization/screens/profile/profile.dart';
+import 'package:itri/features/shop/screens/order/order.dart';
 import 'package:itri/utils/constants/colors.dart';
 
 import 'package:itri/utils/constants/sizes.dart';
@@ -26,7 +27,7 @@ class SettingsScreen extends StatelessWidget {
           children: [
             IPrimaryHeaderContainer(
               child: Column(children: [
-                IAppBar(title: Text('Account', style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white))),
+                IAppBar(title: Text('Account', style: Theme.of(context).textTheme.headlineMedium!.apply(color: IColors.white))),
 
                 IUserProfileTitle(onPressed: () => Get.to(() => const ProfileScreen())),
                 const SizedBox(height: ISizes.spaceBtwSections),
@@ -43,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
 
                   ISettingsMenuTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address', onTap: ()=> Get.to(()=> const UserAddressScreen()),),
                   ISettingsMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
-                  ISettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders'),
+                  ISettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders', onTap: () => Get.to(() => const OrderScreen())),
                   ISettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
                   ISettingsMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted Coupons'),
                   ISettingsMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any Kind of notification message'),

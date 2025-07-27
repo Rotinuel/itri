@@ -41,7 +41,7 @@ class IPromoSlider extends StatelessWidget {
                   width: 20,
                   height: 4,
                   margin: EdgeInsets.only(right: 10),
-                  backgroundColor: controller.carouselCurrentIndex.value == i ? TColors.primary : TColors.grey,
+                  backgroundColor: controller.carouselCurrentIndex.value == i ? IColors.primary : IColors.grey,
                 )
               ],
             )

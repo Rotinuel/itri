@@ -11,7 +11,7 @@ class IBrandTitleWithVerifiedIcon extends StatelessWidget {
     this.textColor,
     this.maxLines = 1, 
     required this.title, 
-    this.iconColor = TColors.primary, 
+    this.iconColor = IColors.primary, 
     this.textAlign = TextAlign.center, 
     this.brandTextSize = TextSizes.small,
 

@@ -33,14 +33,14 @@ class IRoundedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onPressed,
       child: Container(
         width: width,
         height: height,
         padding: padding,
-        decoration: BoxDecoration(border: border, color: backgroundColor ?? (dark ? TColors.black : TColors.light), borderRadius:BorderRadius.circular(borderRadius)),
+        decoration: BoxDecoration(border: border, color: backgroundColor ?? (dark ? IColors.black : IColors.light), borderRadius:BorderRadius.circular(borderRadius)),
         child: ClipRRect(
           child: Image(fit: fit, image: isNetworkImage ? NetworkImage(imageUrl) : AssetImage(imageUrl) as ImageProvider),
         )

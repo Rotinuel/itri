@@ -24,13 +24,13 @@ class IAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return Padding(padding: EdgeInsetsGeometry.symmetric(
       horizontal: ISizes.md
     ),child: AppBar(
       automaticallyImplyLeading: false,
       leading: showBackArrow 
-      ? IconButton(onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left, color: dark ? TColors.white : TColors.dark)): leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
+      ? IconButton(onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left, color: dark ? IColors.white : IColors.dark)): leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
       title: title,
       actions: actions,
     ));

@@ -30,9 +30,9 @@ class StoreScreen extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: THelperFunctions.isDarkMode(context)
-                    ? TColors.black
-                    : TColors.white,
+                backgroundColor: IHelperFunctions.isDarkMode(context)
+                    ? IColors.black
+                    : IColors.white,
                 expandedHeight: 440,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(ISizes.defaultSpace),

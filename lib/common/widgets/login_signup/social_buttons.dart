@@ -13,7 +13,7 @@ class ISocialButtons extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            border: Border.all(color: TColors.grey),
+            border: Border.all(color: IColors.grey),
             borderRadius: BorderRadius.circular(100),
           ),
           child: IconButton(
@@ -28,7 +28,7 @@ class ISocialButtons extends StatelessWidget {
         const SizedBox(width: ISizes.spaceBtwItems),
         Container(
           decoration: BoxDecoration(
-            border: Border.all(color: TColors.grey),
+            border: Border.all(color: IColors.grey),
             borderRadius: BorderRadius.circular(100),
           ),
           child: IconButton(

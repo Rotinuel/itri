@@ -19,6 +19,7 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.all(ISizes.defaultSpace),
         child: ICartItems(),
       ),
+      // checkout
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(ISizes.defaultSpace),
         child: ElevatedButton(onPressed: () => Get.to(() => const CheckOutScreen()), child: Text('Checkout ₦5000.00')),

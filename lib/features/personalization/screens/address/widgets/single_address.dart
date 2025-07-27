@@ -12,13 +12,13 @@ class ISingleAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return IRoundedContainer(
       width: double.infinity,
       showBorder: true,
       padding: EdgeInsets.all(ISizes.md),
-       backgroundColor: selectedAddress ? TColors.primary.withAlpha(130) : Colors.transparent,
-      borderColor: selectedAddress ? Colors.transparent : dark ? TColors.darkerGrey : TColors.grey,
+       backgroundColor: selectedAddress ? IColors.primary.withAlpha(130) : Colors.transparent,
+      borderColor: selectedAddress ? Colors.transparent : dark ? IColors.darkerGrey : IColors.grey,
       margin: const EdgeInsets.only(bottom: ISizes.spaceBtwItems),
       child: Stack(
         children: [
@@ -27,7 +27,7 @@ class ISingleAddress extends StatelessWidget {
             top: 0,
             child: Icon(
               selectedAddress ? Iconsax.tick_circle5 : null,
-              color: selectedAddress ? dark ? TColors.light : TColors.dark : null,
+              color: selectedAddress ? dark ? IColors.light : IColors.dark : null,
             ),
           ),
           Column(

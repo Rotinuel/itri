@@ -13,7 +13,7 @@ class UserReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return Column(
       children: [
         Row(
@@ -52,19 +52,19 @@ class UserReviewCard extends StatelessWidget {
           moreStyle: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            color: TColors.primary,
+            color: IColors.primary,
           ),
           lessStyle: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            color: TColors.primary,
+            color: IColors.primary,
           ),
         ),
         const SizedBox(width: ISizes.spaceBtwItems),
 
         // company review
         IRoundedContainer(
-          backgroundColor: dark ? TColors.darkerGrey : TColors.grey,
+          backgroundColor: dark ? IColors.darkerGrey : IColors.grey,
           child: Padding(
             padding: const EdgeInsets.all(ISizes.md),
             child: Column(
@@ -92,12 +92,12 @@ class UserReviewCard extends StatelessWidget {
                   moreStyle: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: TColors.primary,
+                    color: IColors.primary,
                   ),
                   lessStyle: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: TColors.primary,
+                    color: IColors.primary,
                   ),
                 ),
               ],

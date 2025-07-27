@@ -30,9 +30,9 @@ class IBrandCard extends StatelessWidget {
                 image: IImages.clothIcon,
                 backgroundColor: Colors.transparent,
                 overlayColor:
-                    THelperFunctions.isDarkMode(context)
-                    ? TColors.white
-                    : TColors.black,
+                    IHelperFunctions.isDarkMode(context)
+                    ? IColors.white
+                    : IColors.black,
               ),
             ),
     

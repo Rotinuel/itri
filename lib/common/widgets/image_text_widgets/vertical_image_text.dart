@@ -8,7 +8,7 @@ class IVerticalImageText extends StatelessWidget {
     super.key, 
     required this.image, 
     required this.title, 
-    this.textColor = TColors.white, 
+    this.textColor = IColors.white, 
     this.backgroundColor, 
     this.onTap,
   });
@@ -20,7 +20,7 @@ class IVerticalImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = IHelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
@@ -32,11 +32,11 @@ class IVerticalImageText extends StatelessWidget {
               height: 56,
               padding: const EdgeInsets.all(ISizes.sm),
               decoration: BoxDecoration(
-                color: backgroundColor ?? (THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white),
+                color: backgroundColor ?? (IHelperFunctions.isDarkMode(context) ? IColors.black : IColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
-                child: Image(image: AssetImage(image), fit: BoxFit.cover, color: dark ? TColors.light : TColors.dark),
+                child: Image(image: AssetImage(image), fit: BoxFit.cover, color: dark ? IColors.light : IColors.dark),
                 ),
             ),
               const SizedBox(height: ISizes.spaceBtwItems / 2),
@@ -44,7 +44,7 @@ class IVerticalImageText extends StatelessWidget {
               width: 55,
               child: 
             Text(
-              'shoes Category', style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.white),maxLines: 1, overflow: TextOverflow.ellipsis,
+              'shoes Category', style: Theme.of(context).textTheme.labelMedium!.apply(color: IColors.white),maxLines: 1, overflow: TextOverflow.ellipsis,
             ),
             )
           ],

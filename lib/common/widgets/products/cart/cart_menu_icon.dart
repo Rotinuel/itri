@@ -19,8 +19,8 @@ class ICartCounterIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
-    final bgColor = counterBgColor ?? (dark ? TColors.white : TColors.black);
+    final dark = IHelperFunctions.isDarkMode(context);
+    final bgColor = counterBgColor ?? (dark ? IColors.white : IColors.black);
     final textColor = counterTextColor ?? _getContrastColor(bgColor);
     return Stack(
       children: [
@@ -34,7 +34,7 @@ class ICartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-              color: counterBgColor ?? (dark ? TColors.white : TColors.black),
+              color: counterBgColor ?? (dark ? IColors.white : IColors.black),
               borderRadius: BorderRadius.circular(100),
             ),
             child: Center(

@@ -12,8 +12,8 @@ class IRoundedContainer extends StatelessWidget {
     this.padding,
     this.showBorder = false,
     this.radius = ISizes.cardRadiusLg,
-    this.backgroundColor = TColors.white,
-    this.borderColor = TColors.borderPrimary, 
+    this.backgroundColor = IColors.white,
+    this.borderColor = IColors.borderPrimary, 
     });
 
 
