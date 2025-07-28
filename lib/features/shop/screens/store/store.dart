@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:itri/common/widgets/appbar/appbar.dart';
 import 'package:itri/common/widgets/appbar/tabbar.dart';
 import 'package:itri/common/widgets/custom_shapes/containers/search_container.dart';
@@ -6,6 +7,7 @@ import 'package:itri/common/widgets/layouts/grid_layout.dart';
 import 'package:itri/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
 import 'package:itri/common/widgets/brands/brand_card.dart';
+import 'package:itri/features/shop/screens/brand/all_brands.dart';
 import 'package:itri/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:itri/utils/constants/colors.dart';
 import 'package:itri/utils/constants/sizes.dart';
@@ -53,7 +55,7 @@ class StoreScreen extends StatelessWidget {
                       // --Feature brands
                       ISectionHeading(
                         title: 'Featured Brands',
-                        onPressed: () {},
+                        onPressed: () => Get.to(() => const AllBrandsScreen()),
                       ),
                       const SizedBox(height: ISizes.spaceBtwItems / 1.5),
       

@@ -10,14 +10,18 @@ import 'package:itri/utils/helpers/helper_functions.dart';
 
 class IBrandCard extends StatelessWidget {
   const IBrandCard({
-    super.key, 
-    required bool showBorder,
+    super.key,
+    this.onTap,
+    required this.showBorder,
   });
+
+  final bool showBorder;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: IRoundedContainer(
         padding: const EdgeInsets.all(ISizes.sm),
         showBorder: true,
