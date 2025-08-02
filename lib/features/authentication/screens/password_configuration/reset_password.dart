@@ -29,14 +29,14 @@ class ResetPassword extends StatelessWidget {
               const SizedBox(height: ISizes.spaceBtwSections),
 
               Text(
-                TTexts.changeYourPasswordTitle,
+                ITexts.changeYourPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
 
               Text(
-                TTexts.changeYourPasswordSubTitle,
+                ITexts.changeYourPasswordSubTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
@@ -47,7 +47,7 @@ class ResetPassword extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: (){},
-                  child: const Text(TTexts.done),
+                  child: const Text(ITexts.done),
                 ),
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
@@ -55,7 +55,7 @@ class ResetPassword extends StatelessWidget {
                 width: double.infinity,
                 child: TextButton(
                   onPressed: (){},
-                  child: const Text(TTexts.resendEmail),
+                  child: const Text(ITexts.resendEmail),
                 ),
               ),
             ]

@@ -1,6 +1,6 @@
 
 /// This class contains all the App Text in String formats.
-class TTexts {
+class ITexts {
 
   // -- GLOBAL Texts
   static const String and = "and";
@@ -8,7 +8,7 @@ class TTexts {
   static const String done = "Done";
   static const String submit = "Submit";
   static const String appName = "Itri";
-  static const String tContinue = "Continue";
+  static const String iContinue = "Continue";
 
 
   // -- OnBoarding Texts

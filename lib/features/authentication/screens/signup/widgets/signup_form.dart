@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:itri/features/authentication/screens/signup/verify_email.dart';
-import 'package:itri/utils/constants/colors.dart';
+import 'package:itri/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:itri/utils/constants/sizes.dart';
 import 'package:itri/utils/constants/text_strings.dart';
-import 'package:itri/utils/helpers/helper_functions.dart';
+import 'package:itri/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
+import 'package:itri/utils/validators/validation.dart';
 
 
 class ISignupForm extends StatelessWidget {
@@ -16,17 +16,21 @@ class ISignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = IHelperFunctions.isDarkMode(context);
+    final controller = Get.put(SignupController());
     return Form(
+      key: controller.signupFormKey,
       child: Column(
         children: [
+          // First Name and Last Name
           Row(
             children: [
               Expanded(
                 child: TextFormField(
+                  validator: (value) => IValidator.validateEmptyText('First name', value),
+                  controller: controller.firstName,
                   expands: false,
                   decoration: const InputDecoration(
-                    labelText: TTexts.firstName,
+                    labelText: ITexts.firstName,
                     prefixIcon: Icon(Iconsax.user),
                   ),
                 ),
@@ -34,9 +38,11 @@ class ISignupForm extends StatelessWidget {
               const SizedBox(width: ISizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
+                  validator: (value) => IValidator.validateEmptyText('Last name', value),
+                  controller: controller.lastName,
                   expands: false,
                   decoration: const InputDecoration(
-                    labelText: TTexts.lastName,
+                    labelText: ITexts.lastName,
                     prefixIcon: Icon(Iconsax.user),
                   ),
                 ),
@@ -47,9 +53,11 @@ class ISignupForm extends StatelessWidget {
     
           // username
           TextFormField(
+            validator: (value) => IValidator.validateEmptyText('Username', value),
+            controller: controller.username,
             expands: false,
             decoration: const InputDecoration(
-              labelText: TTexts.username,
+              labelText: ITexts.username,
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
@@ -57,9 +65,11 @@ class ISignupForm extends StatelessWidget {
           const SizedBox(height: ISizes.spaceBtwInputFields),
           // email
           TextFormField(
+            validator: (value) => IValidator.validateEmail(value),
+            controller: controller.email,
             expands: false,
             decoration: const InputDecoration(
-              labelText: TTexts.email,
+              labelText: ITexts.email,
               prefixIcon: Icon(Iconsax.direct),
             ),
           ),
@@ -67,81 +77,44 @@ class ISignupForm extends StatelessWidget {
           const SizedBox(height: ISizes.spaceBtwInputFields),
           // Phone Number
           TextFormField(
+            validator: (value) => IValidator.validatePhoneNumber(value),
+            controller: controller.phoneNumber,
             expands: false,
             decoration: const InputDecoration(
-              labelText: TTexts.phoneNo,
+              labelText: ITexts.phoneNo,
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
     
           const SizedBox(height: ISizes.spaceBtwInputFields),
           // Password
-          TextFormField(
-            obscureText: true,
-            decoration: const InputDecoration(
-              labelText: TTexts.password,
-              prefixIcon: Icon(Iconsax.password_check),
-              suffixIcon: Icon(Iconsax.eye_slash),
+          Obx(
+            () =>
+             TextFormField(
+              validator: (value) => IValidator.validatePassword(value),
+              controller: controller.password,
+              obscureText: controller.hidePassword.value,
+              decoration: InputDecoration(
+                labelText: ITexts.password,
+                prefixIcon: const Icon(Iconsax.password_check),
+                suffixIcon: IconButton(
+                  onPressed: () => controller.hidePassword.value = !controller.hidePassword.value, 
+                  icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                ),
+              ),
             ),
           ),
           const SizedBox(height: ISizes.spaceBtwSections),
     
           // Terms&Conditions CheckBox
-          Row(
-            children: [
-              SizedBox(
-                width: 24,
-                height: 24,
-                child: Checkbox(value: true, onChanged: (value) {}),
-              ),
-              const SizedBox(width: ISizes.spaceBtwInputFields),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: '${TTexts.iAgreeTo} ',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                    TextSpan(
-                      text: '${TTexts.privacyPolicy} ',
-                      style: Theme.of(context).textTheme.bodyMedium!
-                          .apply(
-                            color: dark
-                                ? IColors.white
-                                : IColors.primary,
-                            decoration: TextDecoration.underline,
-                            decorationColor: dark
-                                ? IColors.white
-                                : IColors.primary,
-                          ),
-                    ),
-                    TextSpan(
-                      text: '${TTexts.and} ',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                    TextSpan(
-                      text: TTexts.termsOfUse,
-                      style: Theme.of(context).textTheme.bodyMedium!
-                          .apply(
-                            color: dark
-                                ? IColors.white
-                                : IColors.primary,
-                            decoration: TextDecoration.underline,
-                            decorationColor: dark
-                                ? IColors.white
-                                : IColors.primary,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+          const ITermsAndConditionCheckbox(),
           // sign up button
           const SizedBox(height: ISizes.spaceBtwSections),
-          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => const VerifyEmailScreen()), child: const Text(TTexts.createAccount))),
+          
+          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => controller.signup(), child: const Text(ITexts.createAccount))),
         ],
       ),
     );
   }
 }
+

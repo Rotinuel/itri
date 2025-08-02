@@ -22,12 +22,12 @@ class ILoginHeader extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    TTexts.loginTitle,
+                    ITexts.loginTitle,
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: ISizes.sm),
                   Text(
-                    TTexts.loginSubTitle,
+                    ITexts.loginSubTitle,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],

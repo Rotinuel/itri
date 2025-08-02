@@ -6,6 +6,7 @@ import 'package:itri/common/widgets/custom_shapes/containers/primary_header_cont
 import 'package:itri/common/widgets/list_tiles/settings_menu_tiles.dart';
 import 'package:itri/common/widgets/list_tiles/user_profile_title.dart';
 import 'package:itri/common/widgets/texts/section_heading.dart';
+import 'package:itri/data/authentication/authentication/authentication_repository.dart';
 import 'package:itri/features/personalization/screens/address/address.dart';
 import 'package:itri/features/personalization/screens/profile/profile.dart';
 import 'package:itri/features/shop/screens/order/order.dart';
@@ -63,7 +64,7 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: ISizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: (){}, child: const Text('Logout')),
+                    child: OutlinedButton(onPressed: () => AuthenticationRepository.instance.logout(), child: const Text('Logout')),
                   ),
                     const SizedBox(height: ISizes.spaceBtwSections * 2.5),
                   

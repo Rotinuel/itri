@@ -21,7 +21,7 @@ class SignupScreen extends StatelessWidget {
             children: [
               // Title
               Text(
-                TTexts.signupTitle,
+                ITexts.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: ISizes.spaceBtwSections),
@@ -30,7 +30,7 @@ class SignupScreen extends StatelessWidget {
               const ISignupForm(),
               const SizedBox(height: ISizes.spaceBtwSections),
               // divider
-              IFormDivider(dividerText: TTexts.orSignUpWith.capitalize!),
+              IFormDivider(dividerText: ITexts.orSignUpWith.capitalize!),
               const SizedBox(height: ISizes.spaceBtwSections),
               // social media buttons
               const ISocialButtons(),

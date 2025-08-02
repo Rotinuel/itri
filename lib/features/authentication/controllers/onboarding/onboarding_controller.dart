@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:itri/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
@@ -21,6 +22,8 @@ class OnBoardingController extends GetxController {
   // update current index & jump to next page
   void nextPage() {
     if(currentPageIndex.value == 2){
+      final storage = GetStorage();
+      storage.write('IsFirstTime', false);
       Get.offAll(const LoginScreen()); // Navigate to login screen if on last page
     }  else {
       int page = currentPageIndex.value + 1;

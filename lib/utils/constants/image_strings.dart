@@ -162,5 +162,8 @@ class IImages {
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";
   static const String successfulPaymentIcon = "assets/icons/payment_methods/successful_payment_icon.png";
+
+  // ignore: prefer_typing_uninitialized_variables
+  static var successfullyRegisterAnimation;
 }
 

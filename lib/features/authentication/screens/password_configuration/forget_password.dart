@@ -18,15 +18,15 @@ class ForgetPassword extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Headings
-            Text(TTexts.forgetPasswordTitle, style: Theme.of(context).textTheme.headlineLarge),
+            Text(ITexts.forgetPasswordTitle, style: Theme.of(context).textTheme.headlineLarge),
             const SizedBox(height: ISizes.spaceBtwItems),
-            Text(TTexts.forgetPasswordSubTitle, style: Theme.of(context).textTheme.labelMedium),
+            Text(ITexts.forgetPasswordSubTitle, style: Theme.of(context).textTheme.labelMedium),
             const SizedBox(height: ISizes.spaceBtwSections * 2),
 
             // Text field
             TextFormField(
               decoration: InputDecoration(
-                labelText: TTexts.email,
+                labelText: ITexts.email,
                 prefixIcon: Icon(Iconsax.direct_right),
               ),
               keyboardType: TextInputType.emailAddress,
@@ -35,7 +35,7 @@ class ForgetPassword extends StatelessWidget {
 
             // Button
             SizedBox(width:double.infinity, child: ElevatedButton( onPressed: () => Get.off(() => const ResetPassword()),
-            child: Text(TTexts.submit))),
+            child: Text(ITexts.submit))),
           ]
           ),
         ),

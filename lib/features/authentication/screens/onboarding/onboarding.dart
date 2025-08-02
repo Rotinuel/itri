@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:itri/features/authentication/controllers/onboarding_controller.dart';
+import 'package:itri/features/authentication/controllers/onboarding/onboarding_controller.dart';
 
 import 'package:itri/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:itri/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
@@ -26,18 +26,18 @@ class OnBoardingScreen extends StatelessWidget {
             children: const [
               OnBoardingPage(
                 image: IImages.onBoardingImage1, 
-                title: TTexts.onBoardingTitle1, 
-                subTitle: TTexts.onBoardingSubTitle1
+                title: ITexts.onBoardingTitle1, 
+                subTitle: ITexts.onBoardingSubTitle1
               ),
               OnBoardingPage(
                 image: IImages.onBoardingImage2, 
-                title: TTexts.onBoardingTitle2, 
-                subTitle: TTexts.onBoardingSubTitle2
+                title: ITexts.onBoardingTitle2, 
+                subTitle: ITexts.onBoardingSubTitle2
               ),
               OnBoardingPage(
                 image: IImages.onBoardingImage3, 
-                title: TTexts.onBoardingTitle3, 
-                subTitle: TTexts.onBoardingSubTitle3
+                title: ITexts.onBoardingTitle3, 
+                subTitle: ITexts.onBoardingSubTitle3
               ),
             ],
           ),
